@@ -10,11 +10,11 @@ geometry DEF cube IndexedFaceSet {
 
 coord Coordinate { 
 point [
- 0.000  0.000  0.000,  
+ 0.000  0.000  0.000,
 -0.084  0.000  0.000,
 -0.084  0.084  0.000,
- 0.000  0.084  0.000, 
- 0.000  0.000  0.084,  
+ 0.000  0.084  0.000,
+ 0.000  0.000  0.084,
 -0.084  0.000  0.084,
 -0.084  0.084  0.084,
  0.000  0.084  0.084 ]
@@ -30,12 +30,12 @@ coordIndex [
 }
 
 
-# Object "cylinre"
+# Object "cylinder"
 Shape {
 
-geometry DEF cyl_cylindre IndexedFaceSet {
+geometry DEF cyl_cylinder IndexedFaceSet {
 
-coord Coordinate { 
+coord Coordinate {
 point [
 -0.170  0.010  0.000,
 -0.170 -0.070  0.000,
