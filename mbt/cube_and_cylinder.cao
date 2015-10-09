@@ -1,23 +1,30 @@
 V1
-10
- 0.000  0.000  0.000    
--0.084  0.000  0.000 
--0.084  0.084  0.000 
- 0.000  0.084  0.000   
- 0.000  0.000  0.084   
+# 3D points
+10                   # Number of points
+ 0.000  0.000  0.000 # Point with index 0
+-0.084  0.000  0.000
+-0.084  0.084  0.000
+ 0.000  0.084  0.000
+ 0.000  0.000  0.084
 -0.084  0.000  0.084
--0.084  0.084  0.084 
- 0.000  0.084  0.084  
--0.170 -0.030  0.000
--0.170 -0.030  0.250
-0 
-0 
-6
-4 0 4 5 1
+-0.084  0.084  0.084
+ 0.000  0.084  0.084
+-0.170 -0.030  0.000 # Point with index 8 used to define the cylinder
+-0.170 -0.030  0.250 # Point with index 9 used to define the cylinder
+# 3D lines
+0                    # No 3D lines
+# 3D faces from lines
+0                    # No 3D faces from lines
+# 3D faces from points
+6                    # 6 faces to describe the cube
+4 0 4 5 1            # Face with index 0 defined by 3D point 0, 4, 5 and 1
 4 1 5 6 2
 4 6 7 3 2
 4 3 7 4 0
 4 0 1 2 3
-4 7 6 5 4
-1
-8 9 0.04
+4 7 6 5 4            # Face with index 5
+# 3D cylinders
+1                    # One 3D cylinder
+8 9 0.04             # Revolution axis between 3D points 8 and 9
+# 3D circle
+0                    # No 3D circle
