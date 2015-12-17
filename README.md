@@ -4,9 +4,11 @@ ViSP-images contains data useful to run [ViSP][1] examples.
 
 ## Getting ViSP-images
 
-To get the data set using git:
+- To get the data set as a zip archive corresponding to a release just [visit download page][2].
 
-	git clone https://github.com/lagadic/ViSP-images.git
+- To get the data set using git:
+
+		git clone https://github.com/lagadic/ViSP-images.git
 		
 ## Setting ViSP-images
 
