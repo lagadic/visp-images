@@ -1,18 +1,18 @@
 # visp-images
 
-visp-images contains data useful to run [ViSP][1] examples.
+`visp-images` contains data useful to run [ViSP][1] examples.
 
 ## Getting visp-images
 
-- To get visp-images dataset as a zip archive corresponding to a release just [visit download page][2].
+- To get `visp-images` dataset as a zip archive corresponding to a release just [visit download page][2].
 
 - To get the dataset using git:
 
 		$ git clone https://github.com/lagadic/ViSP-images.git
 		
-## Setting ViSP-images
+## Using visp-images
 
-To use the data set you have to set `VISP_INPUT_IMAGE_PATH` environment variable:
+To use the dataset you have to set `VISP_INPUT_IMAGE_PATH` environment variable:
 
 - on unix-like platforms:
 
