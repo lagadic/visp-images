@@ -1,36 +1,34 @@
-# ViSP-images
+# visp-images
 
-ViSP-images contains data useful to run [ViSP][1] examples.
+visp-images contains data useful to run [ViSP][1] examples.
 
-## Getting ViSP-images
+## Getting visp-images
 
-- To get the data set as a zip archive corresponding to a release just [visit download page][2].
+- To get visp-images dataset as a zip archive corresponding to a release just [visit download page][2].
 
-- To get the data set using git:
+- To get the dataset using git:
 
-		git clone https://github.com/lagadic/ViSP-images.git
+		$ git clone https://github.com/lagadic/ViSP-images.git
 		
 ## Setting ViSP-images
 
-To use the data set you have to set VISP_INPUT_IMAGE_PATH environment variable:
+To use the data set you have to set `VISP_INPUT_IMAGE_PATH` environment variable:
 
 - on unix-like platforms:
 
-		export VISP_INPUT_IMAGE_PATH=<my directory>
+		$ export VISP_INPUT_IMAGE_PATH=<path to visp-images directory>
 
 - on windows platforms:
 
-		setx VISP_INPUT_IMAGE_PATH <my directory>
-
-Notice the the folder <my directory> should not contain the parent directory ViSP-images. 
+		$ setx VISP_INPUT_IMAGE_PATH <path to visp-images directory>
 
 ## Example
 
-The following example that can be achieved on unix-like platforms allows to use the data set installed in /home/user/visp/ViSP-images:
+The following example that can be achieved on unix-like platforms allows to use the data set installed in `/home/user/visp-ws/visp-images`:
 
-	cd /home/user/visp
-	git clone https://github.com/lagadic/ViSP-images.git
-	export VISP_INPUT_IMAGE_PATH=/home/user/visp
+	$ cd $HOME/visp-ws
+	$ git clone https://github.com/lagadic/visp-images.git
+	$ export VISP_INPUT_IMAGE_PATH=/home/user/visp-ws/visp-images
 
 
 [1]: http://visp.inria.fr "ViSP"
