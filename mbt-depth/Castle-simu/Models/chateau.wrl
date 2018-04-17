@@ -1,0 +1,473 @@
+#VRML V2.0 utf8
+
+Group {
+children [
+# Light light
+Transform {
+	translation 0.0865013 0.151752 0
+	children [
+		PointLight
+		{
+		on TRUE
+		intensity 1
+		color 1 1 1
+		}
+		]
+}
+
+# Light light
+Transform {
+	translation -0.210471 0.0931758 0
+	children [
+		PointLight
+		{
+		on TRUE
+		intensity 1
+		color 1 1 1
+		}
+		]
+}
+
+# Light light
+Transform {
+	translation -0.118238 0.104011 0.1406
+	children [
+		PointLight
+		{
+		on TRUE
+		intensity 1
+		color 1 1 1
+		}
+		]
+}
+
+# Light light
+Transform {
+	translation -0.0605312 0.121988 -0.0664439
+	children [
+		PointLight
+		{
+		on TRUE
+		intensity 1
+		color 1 1 1
+		}
+		]
+}
+
+
+# Object "rect" 
+Shape {
+appearance Appearance { 
+ material Material {
+  diffuseColor 1 1 1
+  specularColor 0 0 0
+  emissiveColor 0 0 0
+  shininess 0.078125
+  transparency 0.000000
+ }
+}
+geometry IndexedFaceSet {
+solid FALSE
+creaseAngle 0.785398
+coord Coordinate { 
+point [
+-0.144359 0.102637 0.0295115,
+-0.144358 0.102889 -0.0378212,
+-0.144359 0.0810144 -0.0378212,
+-0.144359 0.0811129 0.0295115]
+}
+
+coordIndex [
+ 3, 2, 1, 0, -1]}
+}
+
+# Object "poly" 
+Shape {
+appearance Appearance { 
+ material Material {
+  diffuseColor 0.627451 0.25098 0.25098
+  specularColor 0 0 0
+  emissiveColor 0 0 0
+  shininess 0.078125
+  transparency 0.000000
+ }
+}
+geometry IndexedFaceSet {
+solid FALSE
+creaseAngle 0.785398
+coord Coordinate { 
+point [
+-0.0068018 0.0397861 0.040224,
+-0.0061982 0.0286061 0.071224,
+-0.0061982 0.0676061 0.066724,
+-0.0061982 0.0816061 0.038224]
+}
+
+coordIndex [
+ 0, 1, 2, 3, -1]}
+}
+
+# Object "rect" 
+Shape {
+appearance Appearance { 
+ material Material {
+  diffuseColor 0 1 0
+  specularColor 0.5 0.5 0.5
+  emissiveColor 0 0 0
+  shininess 0.078125
+  transparency 0.000000
+ }
+}
+geometry IndexedFaceSet {
+solid FALSE
+creaseAngle 0.785398
+coord Coordinate { 
+point [
+-0.0409967 0.0740009 0.041,
+-0.0069967 0.0740009 0.041,
+-0.0069967 0.0383609 0.041,
+-0.0409967 0.0383609 0.041]
+}
+
+coordIndex [
+ 3, 2, 1, 0, -1]}
+}
+
+# Object "rect" 
+Shape {
+appearance Appearance { 
+ material Material {
+  diffuseColor 0 1 0
+  specularColor 0.5 0.5 0.5
+  emissiveColor 0 0 0
+  shininess 0.078125
+  transparency 0.000000
+ }
+}
+geometry IndexedFaceSet {
+solid FALSE
+creaseAngle 0.785398
+coord Coordinate { 
+point [
+0.0128964 0.0389431 0.041,
+0.0398964 0.0389431 0.041,
+0.0398964 0.0745831 0.041,
+0.0128964 0.0745831 0.041]
+}
+
+coordIndex [
+ 0, 1, 2, 3, -1]}
+}
+
+# Object "box" 
+Shape {
+appearance Appearance { 
+ material Material {
+  diffuseColor 1 1 0
+  specularColor 0 0 0
+  emissiveColor 0 0 0
+  shininess 0.078125
+  transparency 0.000000
+ }
+}
+geometry IndexedFaceSet {
+solid FALSE
+creaseAngle 0.785398
+coord Coordinate { 
+point [
+-0.04 0.080763 -0.043,
+0.04 0.080763 -0.043,
+0.0405595 0.080763 0.039,
+-0.0394405 0.080763 0.039,
+-0.0394405 0.178763 0.039,
+0.0405595 0.178763 0.039,
+0.04 0.178763 -0.043,
+-0.04 0.178763 -0.043]
+}
+
+coordIndex [
+# 0, 1, 2, 3, -1,
+# 7, 4, 5, 6, -1,
+ 4, 3, 2, 5, -1,
+ 6, 1, 0, 7, -1,
+ 7, 0, 3, 4, -1,
+ 5, 2, 1, 6, -1]}
+}
+
+# Object "line" 
+Shape {
+appearance Appearance { 
+ material Material {
+  emissiveColor 1 1 1
+ }
+}
+geometry IndexedLineSet {
+coord Coordinate { 
+point [
+-0.297504 0.172924 0]
+}
+
+coordIndex [
+ 0, -1]}
+}
+
+# Object "rect" 
+Shape {
+appearance Appearance { 
+ material Material {
+  diffuseColor 1 0.466667 0
+  specularColor 0 0 0
+  emissiveColor 0 0 0
+  shininess 0.078125
+  transparency 0.000000
+ }
+}
+geometry IndexedFaceSet {
+solid FALSE
+creaseAngle 0.785398
+coord Coordinate { 
+point [
+-0.0065 0.0807631 0.039,
+0.0135 0.0807631 0.039,
+0.0135 0.0667631 0.0675,
+-0.0065 0.0667631 0.0675]
+}
+
+coordIndex [
+ 3, 2, 1, 0, -1]}
+}
+
+# Object "rect" 
+Shape {
+appearance Appearance { 
+ material Material {
+  diffuseColor 1 1 1
+  specularColor 0 0 0
+  emissiveColor 0 0 0
+  shininess 0.078125
+  transparency 0.000000
+ }
+}
+geometry IndexedFaceSet {
+solid FALSE
+creaseAngle 0.785398
+coord Coordinate { 
+point [
+-0.0485422 0.000763126 0.102444,
+-0.0481146 0.000763126 0.102444,
+-0.0481146 0.000763126 0.102444,
+-0.0485422 0.000763126 0.102444]
+}
+
+coordIndex [
+ 3, 2, 1, 0, -1]}
+}
+
+# Object "rect" 
+Shape {
+appearance Appearance { 
+ material Material {
+  diffuseColor 1 0 0
+  specularColor 0 0 0
+  emissiveColor 0 0 0
+  shininess 0.078125
+  transparency 0.000000
+ }
+}
+geometry IndexedFaceSet {
+solid FALSE
+creaseAngle 0.785398
+coord Coordinate { 
+point [
+-0.0065 0.0667631 0.0675,
+0.0135 0.0667631 0.0675,
+0.0135 0.0277631 0.072,
+-0.0065 0.0277631 0.072]
+}
+
+coordIndex [
+ 3, 2, 1, 0, -1]}
+}
+
+# Object "poly" 
+Shape {
+appearance Appearance { 
+ material Material {
+  diffuseColor 0.627451 0.25098 0.25098
+  specularColor 0 0 0
+  emissiveColor 0 0 0
+  shininess 0.078125
+  transparency 0.000000
+ }
+}
+geometry IndexedFaceSet {
+solid FALSE
+creaseAngle 0.785398
+coord Coordinate { 
+point [
+0.0135 0.0807632 0.039,
+0.0135 0.0667632 0.0675,
+0.0135 0.0277632 0.072,
+0.0128964 0.0389432 0.041]
+}
+
+coordIndex [
+ 0, 1, 2, 3, -1]}
+}
+
+# Object "rect" 
+Shape {
+appearance Appearance { 
+ material Material {
+  diffuseColor 1 1 1
+  specularColor 0 0 0
+  emissiveColor 0 0 0
+  shininess 0.078125
+  transparency 0.000000
+ }
+}
+geometry IndexedFaceSet {
+solid FALSE
+creaseAngle 0.785398
+coord Coordinate { 
+point [
+-0.144874 0.0807631 -0.038,
+-0.09 0.0807631 -0.038,
+-0.09 0.102763 -0.038,
+-0.144874 0.102637 -0.038]
+}
+
+coordIndex [
+ 0, 1, 2, 3, -1]}
+}
+
+# Object "rect" 
+Shape {
+appearance Appearance { 
+ material Material {
+  diffuseColor 1 1 1
+  specularColor 0 0 0
+  emissiveColor 0 0 0
+  shininess 0.078125
+  transparency 0.000000
+ }
+}
+geometry IndexedFaceSet {
+solid FALSE
+creaseAngle 0.785398
+coord Coordinate { 
+point [
+-0.09 0.0807631 -0.038,
+-0.027 0.0807631 -0.101,
+-0.027 0.102763 -0.101,
+-0.09 0.102763 -0.038]
+}
+
+coordIndex [
+ 0, 1, 2, 3, -1]}
+}
+
+# Object "rect" ligne de devant TO MODIFY 
+Shape {
+appearance Appearance { 
+ material Material {
+  emissiveColor 1 1 1
+ }
+}
+geometry IndexedLineSet {
+coord Coordinate { 
+point [
+-0.144873 0.0807631 0.0294478,
+-0.034873 0.0807631 0.0294478]
+}
+
+coordIndex [ 
+ 0, 1, -1]}
+}
+
+
+# Object "rect" 
+Shape {
+appearance Appearance { 
+ material Material {
+  diffuseColor 1 0 0
+  specularColor 0 0 0
+  emissiveColor 0 0 0
+  shininess 0.078125
+  transparency 0.000000
+ }
+}
+geometry IndexedFaceSet {
+solid FALSE
+creaseAngle 0.785398
+coord Coordinate { 
+point [
+-0.0288728 0.148685 0.0399895,
+-0.00907878 0.148685 0.0399895,
+-0.00907878 0.16906 0.0399895,
+-0.0288728 0.16906 0.0399895]
+}
+
+coordIndex [
+ 0, 1, 2, 3, -1]}
+}
+
+# Object "rect" 
+Shape {
+appearance Appearance { 
+ material Material {
+  diffuseColor 1 0 0
+  specularColor 0 0 0
+  emissiveColor 0 0 0
+  shininess 0.078125
+  transparency 0.000000
+ }
+}
+geometry IndexedFaceSet {
+solid FALSE
+creaseAngle 0.785398
+coord Coordinate { 
+point [
+-0.0401702 0.0811285 -0.00928154,
+-0.0401702 0.0811285 0.0183932,
+-0.0401702 0.125834 0.0183932,
+-0.0401702 0.125834 -0.00928154]
+}
+
+coordIndex [
+ 0, 1, 2, 3, -1]}
+}
+
+# Object "poly" 
+Shape {
+appearance Appearance { 
+ material Material {
+  diffuseColor 0.270588 0.52549 0.454902
+  specularColor 0.5 0.5 0.5
+  emissiveColor 0 0 0
+  shininess 0.078125
+  transparency 0.000000
+ }
+}
+geometry IndexedFaceSet {
+solid FALSE
+creaseAngle 0.785398
+coord Coordinate { 
+point [
+-0.0958554 0.0807631 0.0297099,
+-0.027 0.0807631 -0.101,
+-0.0400834 0.0807269 -0.00693948,
+-0.12075 0.0807631 -0.038,
+-0.039956 0.0806907 -0.0432989,
+-0.0155782 0.0806907 -0.0428988,
+-0.09 0.0807631 -0.038,
+-0.144873 0.0807631 -0.038,
+-0.144873 0.0807631 0.0294478,
+-0.0402107 0.0807631 0.02942]
+}
+
+coordIndex [
+ 2, 4, 5, 1, 6, 3, 7, 8, 0, 9, -1]}
+}
+]
+}
