@@ -8,15 +8,15 @@
     <range>
       <tracking>8</tracking>
     </range>
+    <sample>
+      <step>5</step>
+    </sample>
     <contrast>
       <edge_threshold>10000</edge_threshold>
       <mu1>0.5</mu1>
       <mu2>0.5</mu2>
     </contrast>
   </ecm>
-  <sample>
-    <step>5</step>
-  </sample>
   <klt>
     <mask_border>5</mask_border>
     <max_features>10000</max_features>
