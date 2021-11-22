@@ -8,7 +8,7 @@
 
 - To get the dataset using git:
 
-		$ git clone https://github.com/lagadic/ViSP-images.git
+      $ git clone https://github.com/lagadic/visp-images.git
 		
 ## Using visp-images
 
@@ -16,20 +16,20 @@ To use the dataset you have to set `VISP_INPUT_IMAGE_PATH` environment variable:
 
 - on unix-like platforms:
 
-		$ export VISP_INPUT_IMAGE_PATH=<path to visp-images directory>
+      $ export VISP_INPUT_IMAGE_PATH=<path to visp-images directory>
 
 - on windows platforms:
 
-		$ setx VISP_INPUT_IMAGE_PATH <path to visp-images directory>
+      $ setx VISP_INPUT_IMAGE_PATH <path to visp-images directory>
 
 ## Example
 
-The following example that can be achieved on unix-like platforms allows to use the data set installed in `/home/user/visp-ws/visp-images`:
+The following example that can be achieved on unix-like platforms allows to use the data set installed in `$HOME/visp-ws/visp-images`:
 
 	$ cd $HOME/visp-ws
 	$ git clone https://github.com/lagadic/visp-images.git
-	$ export VISP_INPUT_IMAGE_PATH=/home/user/visp-ws/visp-images
+	$ export VISP_INPUT_IMAGE_PATH=$HOME/visp-ws/visp-images
 
 
-[1]: http://visp.inria.fr "ViSP"
-[2]: http://visp.inria.fr/download "ViSP download"
+[1]: https://visp.inria.fr "ViSP"
+[2]: https://visp.inria.fr/download "ViSP download"
