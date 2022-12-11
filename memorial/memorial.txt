@@ -1,0 +1,8 @@
+https://www.pauldebevec.com/Research/HDR/PFM/
+
+http://paulbourke.net/dataformats/pbmhdr/
+
+https://stackoverflow.com/questions/30255317/does-anyone-know-how-to-convert-to-little-endian-pfm-file-from-imagemagic
+
+$ convert -size 2x2 xc:red -endian LSB PFM:- | hexdump
+$ convert -size 2x2 xc:red -endian MSB PFM:- | hexdump
