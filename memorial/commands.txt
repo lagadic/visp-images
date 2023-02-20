@@ -1,0 +1,13 @@
+pfsin memorial_color_LSB.pfm | pfsoutexr memorial_color_16bits.exr
+
+pfsin memorial_gray_LSB.pfm | pfsoutexr memorial_gray_16bits.exr
+
+pfsin memorial_color_LSB.pfm | pfsoutexr --float32 memorial_color_32bits.exr
+
+pfsin memorial_gray_LSB.pfm | pfsoutexr --float32 memorial_gray_32bits.exr
+
+
+convert memorial_color_LSB.pfm -endian MSB memorial_color_LSB_to_MSB.pfm
+
+convert memorial_gray_LSB.pfm -endian MSB memorial_gray_LSB_to_MSB.pfm
+
