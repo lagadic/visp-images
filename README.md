@@ -1,6 +1,6 @@
 # visp-images
 
-[![License](https://eddelbuettel.github.io/badges/GPL2+.svg)](https://www.gnu.org/licenses/gpl-2.0.html)
+[![License](https://eddelbuettel.github.io/badges/GPL2+.svg)](https://opensource.org/license/gpl-2-0/)
 
 `visp-images` contains data useful to run [ViSP][1] examples.
 
