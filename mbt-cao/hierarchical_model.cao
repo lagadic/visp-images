@@ -1,0 +1,17 @@
+V1
+load("line_model.cao")
+load("cylinder_model.cao")
+load("circle_model.cao")
+#
+# 3D points
+0
+# 3D lines
+0
+# Faces from 3D lines
+0
+# Faces from 3D points
+0
+# 3D cylinders
+0
+# 3D circles
+0
