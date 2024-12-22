@@ -1,0 +1,18 @@
+V1
+# Cylinder model
+3 # Number of points
+# 3D points
+0 1 2
+3 4 5
+6 7 8
+# 3D lines
+0
+# Faces from 3D lines
+0
+# Faces from 3D points
+0
+# 3D cylinders
+1 # Number of cylinders
+0 1 0.5 name=cylinder # cylinder 0: [1st point on revolution axis] [2nd point on revolution axis] [radius]
+# 3D circles
+0

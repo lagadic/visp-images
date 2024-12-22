@@ -1,0 +1,18 @@
+V1
+3 # Number of points
+# 3D points
+0 1 2
+3 4 5
+6 7 8
+# 3D lines
+2
+0 1 name=line_0
+1 2 name=line_1
+# Faces from 3D lines
+0
+# Faces from 3D points
+0
+# 3D cylinders
+0
+# 3D circles
+0
