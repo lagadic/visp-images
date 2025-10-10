@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<root>
+  <!--This file stores intrinsic camera parameters used
+   in the vpCameraParameters Class of ViSP available
+   at https://visp.inria.fr/download/ .
+   It can be read with the parse method of
+   the vpXmlParserCamera class.-->
+  <camera>
+    <!--Name of the camera-->
+    <name>color_camera</name>
+    <!--Size of the image on which camera calibration was performed-->
+    <image_width>640</image_width>
+    <image_height>480</image_height>
+    <!--Intrinsic camera parameters computed for each projection model-->
+    <model>
+      <!--Projection model type-->
+      <type>perspectiveProjWithDistortion</type>
+      <!--Pixel ratio-->
+      <px>607.178466796875</px>
+      <py>607.2342529296875</py>
+      <!--Principal point-->
+      <u0>321.39129638671875</u0>
+      <v0>241.91822814941406</v0>
+      <!--Undistorted to distorted distortion parameter-->
+      <kud>-0</kud>
+      <!--Distorted to undistorted distortion parameter-->
+      <kdu>0</kdu>
+    </model>
+  </camera>
+  <camera>
+    <!--Name of the camera-->
+    <name>depth_camera</name>
+    <!--Size of the image on which camera calibration was performed-->
+    <image_width>640</image_width>
+    <image_height>480</image_height>
+    <!--Intrinsic camera parameters computed for each projection model-->
+    <model>
+      <!--Projection model type-->
+      <type>perspectiveProjWithDistortion</type>
+      <!--Pixel ratio-->
+      <px>607.178466796875</px>
+      <py>607.2342529296875</py>
+      <!--Principal point-->
+      <u0>321.39129638671875</u0>
+      <v0>241.91822814941406</v0>
+      <!--Undistorted to distorted distortion parameter-->
+      <kud>-0</kud>
+      <!--Distorted to undistorted distortion parameter-->
+      <kdu>0</kdu>
+    </model>
+  </camera>
+  <camera>
+    <!--Name of the camera-->
+    <name>infrared_camera</name>
+    <!--Size of the image on which camera calibration was performed-->
+    <image_width>640</image_width>
+    <image_height>480</image_height>
+    <!--Intrinsic camera parameters computed for each projection model-->
+    <model>
+      <!--Projection model type-->
+      <type>perspectiveProjWithDistortion</type>
+      <!--Pixel ratio-->
+      <px>382.9703369140625</px>
+      <py>382.9703369140625</py>
+      <!--Principal point-->
+      <u0>320.80859375</u0>
+      <v0>239.20211791992188</v0>
+      <!--Undistorted to distorted distortion parameter-->
+      <kud>-0</kud>
+      <!--Distorted to undistorted distortion parameter-->
+      <kdu>0</kdu>
+    </model>
+  </camera>
+</root>
