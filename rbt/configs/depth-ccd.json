@@ -1,0 +1,55 @@
+{
+  "vvs": {
+    "gain": 1.0,
+    "maxIterations": 10,
+    "mu": 0.0,
+    "muIterFactor": 0.25,
+    "scaleInvariant": false
+  },
+  "silhouetteExtractionSettings": {
+    "threshold": {
+      "type": "relative",
+      "value": 0.1
+    },
+    "sampling": {
+      "samplingRate": 1,
+      "numPoints": 512,
+      "reusePreviousPoints": true
+    }
+  },
+  "features": [
+    
+
+    {
+      "type": "depth",
+      "weight": {
+        "minWeight": 0.0,
+        "maxWeight": 1,
+        "midpointLocation": 0.5,
+        "slopePower": 4,
+        "increasing": true
+      },
+    
+      "useMask": true,
+      "minMaskConfidence": 0.5,
+    
+      "step": 1,
+      "display": false
+    },
+    {
+      "type": "silhouetteColor",
+      "weight": 0.01,
+      "useMask": false,
+      "minMaskConfidence": 0.0,
+      "temporalSmoothing": 0.1,
+      "maxNumPoints": 0,
+      "ccd": {
+        "h": 16,
+        "delta_h": 1,
+        "min_h": 16
+      }
+    }
+
+
+  ]
+}

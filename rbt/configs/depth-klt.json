@@ -1,0 +1,55 @@
+{
+  "vvs": {
+    "gain": 1.0,
+    "maxIterations": 50,
+    "mu": 0.0,
+    "muIterFactor": 0.25,
+    "scaleInvariant": false
+  },
+  "silhouetteExtractionSettings": {
+    "threshold": {
+      "type": "relative",
+      "value": 0.1
+    },
+    "sampling": {
+      "samplingRate": 1,
+      "numPoints": 512,
+      "reusePreviousPoints": true
+    }
+  },
+  "features": [
+    
+    {
+      "type": "depth",
+      "weight": 1,
+    
+      "useMask": true,
+      "minMaskConfidence": 0.5,
+    
+      "step": 1,
+      "display": false
+    },
+    {
+      "type": "klt",
+      "weight": 1,
+    
+      "useMask": true,
+      "minMaskConfidence": 0.5,
+    
+      "maxReprojectionErrorPixels": 5.0,
+      "newPointsMinPixelDistance": 4,
+      "minimumNumPoints": 20,
+    
+      "blockSize": 5,
+      "useHarris": true,
+      "harris": 0.05,
+      "maxFeatures": 5000,
+      "minDistance": 5.0,
+      "pyramidLevels": 3,
+      "quality": 0.001,
+      "windowSize": 5
+    }
+
+
+  ]
+}
