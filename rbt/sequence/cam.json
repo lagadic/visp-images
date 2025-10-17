@@ -1,9 +1,10 @@
 {
   "h": 480,
   "w": 640,
+  "depthScale": 0.001,
   "px": 607.178466796875,
   "py": 607.2342529296875,
   "u0": 321.39129638671875,
   "v0": 241.91822814941406,
-  "model": "perspectiveProjWithoutDistortion" 
+  "model": "perspectiveProjWithoutDistortion"
 }
