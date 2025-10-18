@@ -3,7 +3,7 @@
     "gain": 1.0,
     "maxIterations": 25,
     "mu": 0.1,
-    "muIterFactor": 0.1,
+    "muIterFactor": 0.25,
     "scaleInvariant": false
   },
   "silhouetteExtractionSettings": {
@@ -12,8 +12,8 @@
       "value": 0.1
     },
     "sampling": {
-      "samplingRate": 2,
-      "numPoints": 0,
+      "samplingRate": 1,
+      "numPoints": 512,
       "reusePreviousPoints": false
     }
   },
