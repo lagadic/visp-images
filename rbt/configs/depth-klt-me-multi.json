@@ -13,19 +13,17 @@
     },
     "sampling": {
       "samplingRate": 1,
-      "numPoints": 512,
+      "numPoints": 1024,
       "reusePreviousPoints": true
     }
   },
   "features": [
     {
       "type": "silhouetteMe",
-      "weight": 1,
+      "weight": 1.0,
       "numCandidates": 3,
-    
       "useMask": false,
       "minMaskConfidence": 0.8,
-    
       "movingEdge": {
         "maskSize": 7,
         "minSampleStep": 1.0,
@@ -44,24 +42,19 @@
     {
       "type": "depth",
       "weight": 1,
-    
       "useMask": true,
       "minMaskConfidence": 0.5,
-    
       "step": 1,
       "display": false
     },
     {
       "type": "klt",
       "weight": 1,
-    
       "useMask": true,
       "minMaskConfidence": 0.5,
-    
       "maxReprojectionErrorPixels": 5.0,
       "newPointsMinPixelDistance": 4,
       "minimumNumPoints": 20,
-    
       "blockSize": 5,
       "useHarris": true,
       "harris": 0.05,
@@ -71,7 +64,5 @@
       "quality": 0.001,
       "windowSize": 5
     }
-
-
   ]
 }

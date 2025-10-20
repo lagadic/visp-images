@@ -17,6 +17,21 @@
       "reusePreviousPoints": true
     }
   },
+  "mask": {
+    "type": "joint",
+    "depth": {
+      "minRadiusFactor": 0.02,
+      "falloffRadiusFactor": 0.02
+    },
+    "color": {
+      "type": "histogram",
+      "bins": 32,
+      "objectUpdateRate": 0.25,
+      "backgroundUpdateRate": 0.25,
+      "maxDepthError": 0.01,
+      "computeOnlyOnBoundingBox": false
+    }
+  },
   "features": [
     
 
@@ -31,15 +46,15 @@
       },
     
       "useMask": true,
-      "minMaskConfidence": 0.5,
+      "minMaskConfidence": 0.75,
       "step": 1,
       "display": false
     },
     {
       "type": "silhouetteColor",
       "weight": 0.1,
-      "useMask": false,
-      "minMaskConfidence": 0.0,
+      "useMask": true,
+      "minMaskConfidence": 0.75,
       "temporalSmoothing": 0.0,
       "maxNumPoints": 0,
       "ccd": {
