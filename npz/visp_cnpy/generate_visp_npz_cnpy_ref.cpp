@@ -70,9 +70,11 @@ int main(int , char *[])
   const std::string int64_identifier = "My int64 data";
   const std::string float_identifier = "My float data";
   const std::string double_identifier = "My double data";
+  const std::string string_identifier = "My string data";
   const std::string complex_identifier = "My complex data";
   const std::string matrix_int_identifier = "My int matrix data";
   const std::string matrix_flt_identifier = "My float matrix data";
+  const std::string matrix_string_identifier = "My string matrix data";
   const std::string vec_complex_identifier = "My complex vector data";
   {
     /* Simple types */
@@ -98,6 +100,10 @@ int main(int , char *[])
     std::cout << "Save double data: " << double_data << std::endl;
     visp::cnpy::npz_save(npz_filename, double_identifier, &double_data, { 1 }, "a");
 
+    std::string string_data = "ViSP: Open source Visual Servoing Platform";
+    std::cout << "Save string data: " << string_data << std::endl;
+    visp::cnpy::npz_save(npz_filename, string_identifier, string_data, "a");
+
     std::complex<double> complex_data(float_data, double_data);
     std::cout << "Save complex data: real=" << complex_data.real() << " ; imag=" << complex_data.imag() << std::endl;
     visp::cnpy::npz_save(npz_filename, complex_identifier, &complex_data, { 1 }, "a");
@@ -114,6 +120,18 @@ int main(int , char *[])
 
     visp::cnpy::npz_save(npz_filename, matrix_int_identifier, &save_vec_int[0], { height, width, channels }, "a");
     visp::cnpy::npz_save(npz_filename, matrix_flt_identifier, &save_vec_flt[0], { height, width, channels }, "a");
+
+    /* 2D string data */
+    std::vector<std::string> save_vec_string;
+    save_vec_string.push_back("ViSP ");
+    save_vec_string.push_back("for ");
+    save_vec_string.push_back("visual servoing: ");
+
+    save_vec_string.push_back("a generic software platform ");
+    save_vec_string.push_back("with a wide class of ");
+    save_vec_string.push_back("robot control skills");
+
+    visp::cnpy::npz_save(npz_filename, matrix_string_identifier, save_vec_string, { 2, 3 }, "a");
 
     /* Vector of complex<double> */
     std::vector<std::complex<float>> vec_complex_data;

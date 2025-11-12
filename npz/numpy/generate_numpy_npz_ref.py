@@ -50,6 +50,7 @@ def main():
     double_identifier = "My double data"
     matrix_int_identifier = "My int matrix data"
     matrix_flt_identifier = "My float matrix data"
+    matrix_string_identifier = "My string matrix data"
 
     data_dict = dict()
     data_dict[bool_false_identifier] = False
@@ -58,6 +59,7 @@ def main():
     data_dict[int64_identifier] = np.int64(-123456)
     data_dict[float_identifier] = np.float32(-456.51)
     data_dict[double_identifier] = np.float64(3.14)
+    data_dict[string_identifier] = "ViSP: Open source Visual Servoing Platform"
 
     height, width, channels = 5, 7, 3
     total = height*width*channels
@@ -71,6 +73,12 @@ def main():
 
     data_dict[matrix_int_identifier] = vec_int
     data_dict[matrix_flt_identifier] = vec_flt
+
+    data_dict[matrix_string_identifier] =  [
+        ["ViSP ", "for ", "visual servoing: "],
+        ["a generic software platform ", "with a wide class of ", "robot control skills"]
+    ]
+
     np.savez(npz_filename, **data_dict)
 
 if __name__ == '__main__':
