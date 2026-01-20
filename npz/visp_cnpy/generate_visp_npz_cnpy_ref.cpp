@@ -63,7 +63,6 @@ int main(int , char *[])
   std::cout << "BigEndianTest2()=" << BigEndianTest2() << std::endl;
 
   // Save multiple types
-  std::string npz_filename = "visp_npz_test_data_cnpy.npz";
   const std::string bool_false_identifier = "My bool false data";
   const std::string bool_true_identifier = "My bool true data";
   const std::string uint32_identifier = "My uint32 data";
@@ -76,84 +75,92 @@ int main(int , char *[])
   const std::string matrix_flt_identifier = "My float matrix data";
   const std::string matrix_string_identifier = "My string matrix data";
   const std::string vec_complex_identifier = "My complex vector data";
-  {
-    /* Simple types */
-    bool b_false = false;
-    visp::cnpy::npz_save(npz_filename, bool_false_identifier, &b_false, { 1 }, "w");
 
-    bool b_true = true;
-    visp::cnpy::npz_save(npz_filename, bool_true_identifier, &b_true, { 1 }, "a");
+  const std::vector<std::string> npz_filename_vec { "visp_npz_test_data_cnpy.npz", "visp_npz_test_data_cnpy_compressed.npz" };
+  const std::vector<bool> compress_vec { false, true };
+  for (size_t i = 0; i < npz_filename_vec.size(); i++) {
+    std::string npz_filename = npz_filename_vec[i];
+    bool compress_data = compress_vec[i];
 
-    uint32_t uint32_data = 99;
-    std::cout << "Save uint32 data: " << uint32_data << std::endl;
-    visp::cnpy::npz_save(npz_filename, uint32_identifier, &uint32_data, { 1 }, "a");
+    {
+      /* Simple types */
+      bool b_false = false;
+      visp::cnpy::npz_save(npz_filename, bool_false_identifier, &b_false, { 1 }, "w", compress_data);
 
-    int64_t int64_data = -123456;
-    std::cout << "Save int64 data: " << int64_data << std::endl;
-    visp::cnpy::npz_save(npz_filename, int64_identifier, &int64_data, { 1 }, "a");
+      bool b_true = true;
+      visp::cnpy::npz_save(npz_filename, bool_true_identifier, &b_true, { 1 }, "a", compress_data);
 
-    float float_data = -456.51f;
-    std::cout << "Save float data: " << float_data << std::endl;
-    visp::cnpy::npz_save(npz_filename, float_identifier, &float_data, { 1 }, "a");
+      uint32_t uint32_data = 99;
+      std::cout << "Save uint32 data: " << uint32_data << std::endl;
+      visp::cnpy::npz_save(npz_filename, uint32_identifier, &uint32_data, { 1 }, "a", compress_data);
 
-    double double_data = 3.14;
-    std::cout << "Save double data: " << double_data << std::endl;
-    visp::cnpy::npz_save(npz_filename, double_identifier, &double_data, { 1 }, "a");
+      int64_t int64_data = -123456;
+      std::cout << "Save int64 data: " << int64_data << std::endl;
+      visp::cnpy::npz_save(npz_filename, int64_identifier, &int64_data, { 1 }, "a", compress_data);
 
-    std::string string_data = "ViSP: Open source Visual Servoing Platform";
-    std::cout << "Save string data: " << string_data << std::endl;
-    visp::cnpy::npz_save(npz_filename, string_identifier, string_data, "a");
+      float float_data = -456.51f;
+      std::cout << "Save float data: " << float_data << std::endl;
+      visp::cnpy::npz_save(npz_filename, float_identifier, &float_data, { 1 }, "a", compress_data);
 
-    std::complex<double> complex_data(float_data, double_data);
-    std::cout << "Save complex data: real=" << complex_data.real() << " ; imag=" << complex_data.imag() << std::endl;
-    visp::cnpy::npz_save(npz_filename, complex_identifier, &complex_data, { 1 }, "a");
+      double double_data = 3.14;
+      std::cout << "Save double data: " << double_data << std::endl;
+      visp::cnpy::npz_save(npz_filename, double_identifier, &double_data, { 1 }, "a", compress_data);
 
-    /* 3D mat types */
-    size_t height = 5, width = 7, channels = 3;
-    std::vector<int> save_vec_int;
-    std::vector<float> save_vec_flt;
-    save_vec_flt.reserve(height*width*channels);
-    for (int i = 0; i < static_cast<int>(height*width*channels); ++i) {
-      save_vec_int.push_back(i);
-      save_vec_flt.push_back(i);
+      std::string string_data = "ViSP: Open source Visual Servoing Platform";
+      std::cout << "Save string data: " << string_data << std::endl;
+      visp::cnpy::npz_save_str(npz_filename, string_identifier, string_data, "a", compress_data);
+
+      std::complex<double> complex_data(float_data, double_data);
+      std::cout << "Save complex data: real=" << complex_data.real() << " ; imag=" << complex_data.imag() << std::endl;
+      visp::cnpy::npz_save(npz_filename, complex_identifier, &complex_data, { 1 }, "a", compress_data);
+
+      /* 3D mat types */
+      size_t height = 5, width = 7, channels = 3;
+      std::vector<int> save_vec_int;
+      std::vector<float> save_vec_flt;
+      save_vec_flt.reserve(height*width*channels);
+      for (int i = 0; i < static_cast<int>(height*width*channels); ++i) {
+        save_vec_int.push_back(i);
+        save_vec_flt.push_back(i);
+      }
+
+      visp::cnpy::npz_save(npz_filename, matrix_int_identifier, &save_vec_int[0], { height, width, channels }, "a", compress_data);
+      visp::cnpy::npz_save(npz_filename, matrix_flt_identifier, &save_vec_flt[0], { height, width, channels }, "a", compress_data);
+
+      /* 2D string data */
+      std::vector<std::string> save_vec_string;
+      save_vec_string.push_back("ViSP ");
+      save_vec_string.push_back("for ");
+      save_vec_string.push_back("visual servoing: ");
+
+      save_vec_string.push_back("a generic software platform ");
+      save_vec_string.push_back("with a wide class of ");
+      save_vec_string.push_back("robot control skills");
+
+      visp::cnpy::npz_save_str(npz_filename, matrix_string_identifier, save_vec_string, { 2, 3 }, "a", compress_data);
+
+      /* Vector of complex<double> */
+      std::vector<std::complex<float>> vec_complex_data;
+      for (int i = 0; i < 3; i++) {
+        vec_complex_data.push_back(std::complex<float>(complex_data.real()*(i+1), complex_data.imag()*2*(i+1)));
+      }
+      visp::cnpy::npz_save(npz_filename, vec_complex_identifier, &vec_complex_data[0], { vec_complex_data.size() }, "a", compress_data);
     }
 
-    visp::cnpy::npz_save(npz_filename, matrix_int_identifier, &save_vec_int[0], { height, width, channels }, "a");
-    visp::cnpy::npz_save(npz_filename, matrix_flt_identifier, &save_vec_flt[0], { height, width, channels }, "a");
+    {
+      visp::cnpy::npz_t npz_data = visp::cnpy::npz_load(npz_filename);
 
-    /* 2D string data */
-    std::vector<std::string> save_vec_string;
-    save_vec_string.push_back("ViSP ");
-    save_vec_string.push_back("for ");
-    save_vec_string.push_back("visual servoing: ");
+      std::cout << npz_filename << " file contains the following data:" << std::endl;
+      for (visp::cnpy::npz_t::const_iterator it = npz_data.begin(); it != npz_data.end(); ++it) {
+        std::cout << "  " << it->first << std::endl;
+      }
+      std::cout << std::endl;
 
-    save_vec_string.push_back("a generic software platform ");
-    save_vec_string.push_back("with a wide class of ");
-    save_vec_string.push_back("robot control skills");
-
-    visp::cnpy::npz_save(npz_filename, matrix_string_identifier, save_vec_string, { 2, 3 }, "a");
-
-    /* Vector of complex<double> */
-    std::vector<std::complex<float>> vec_complex_data;
-    for (int i = 0; i < 3; i++) {
-      vec_complex_data.push_back(std::complex<float>(complex_data.real()*(i+1), complex_data.imag()*2*(i+1)));
+      visp::cnpy::npz_t::iterator it_bool_false = npz_data.find(bool_false_identifier);
+      visp::cnpy::npz_t::iterator it_bool_true = npz_data.find(bool_true_identifier);
+      std::cout << "it_bool_false=" << *(it_bool_false->second.data<bool>()) << std::endl;
+      std::cout << "it_bool_true=" << *(it_bool_true->second.data<bool>()) << std::endl;
     }
-    visp::cnpy::npz_save(npz_filename, vec_complex_identifier, &vec_complex_data[0], { vec_complex_data.size() }, "a");
-  }
-
-  {
-    visp::cnpy::npz_t npz_data = visp::cnpy::npz_load(npz_filename);
-
-    std::cout << npz_filename << " file contains the following data:" << std::endl;
-    for (visp::cnpy::npz_t::const_iterator it = npz_data.begin(); it != npz_data.end(); ++it) {
-      std::cout << "  " << it->first << std::endl;
-    }
-    std::cout << std::endl;
-
-    visp::cnpy::npz_t::iterator it_bool_false = npz_data.find(bool_false_identifier);
-    visp::cnpy::npz_t::iterator it_bool_true = npz_data.find(bool_true_identifier);
-    std::cout << "it_bool_false=" << *(it_bool_false->second.data<bool>()) << std::endl;
-    std::cout << "it_bool_true=" << *(it_bool_true->second.data<bool>()) << std::endl;
   }
 
   return EXIT_SUCCESS;
