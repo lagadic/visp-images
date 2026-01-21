@@ -40,14 +40,13 @@ def main():
     print(f"Version info: {sys.version_info}")
     print(f"NumPy info: {np.__version__}")
 
-    npz_filename = "visp_npz_test_data_numpy.npz"
-
     bool_false_identifier = "My bool false data"
     bool_true_identifier = "My bool true data"
     uint32_identifier = "My uint32 data"
     int64_identifier = "My int64 data"
     float_identifier = "My float data"
     double_identifier = "My double data"
+    string_identifier = "My string data"
     matrix_int_identifier = "My int matrix data"
     matrix_flt_identifier = "My float matrix data"
     matrix_string_identifier = "My string matrix data"
@@ -79,7 +78,11 @@ def main():
         ["a generic software platform ", "with a wide class of ", "robot control skills"]
     ]
 
+    npz_filename = "visp_npz_test_data_numpy.npz"
     np.savez(npz_filename, **data_dict)
+
+    npz_compressed_filename = "visp_npz_test_data_numpy_compressed.npz"
+    np.savez_compressed(npz_compressed_filename, **data_dict)
 
 if __name__ == '__main__':
     main()
